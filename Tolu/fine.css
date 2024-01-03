@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.container {
+    padding: 20px;
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu li {
+    margin: 0 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#menu a:hover {
+    color: #ff004f;
+}
+
+.fa-bars {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-content p {
+    font-size: 18px;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.header-content span {
+    color: #ff004f;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.sub-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-link {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tab-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.tab-link.active-link::after {
+    width: 50%;
+}
+
+.tab-content ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-content ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.services-list,
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div,
+.work {
+    background: #262626;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i,
+.work img {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.services-list div h2,
+.work h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover,
+.work:hover {
+    background-color: #ff004f;
+    transform: translateY(-10px);
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn,
+.btn2 {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    transition: background 0.5s;
+}
+
+.btn:hover,
+.btn2:hover {
+    background: #ff004f;
+}
+
+.contact-right form input,
+.contact-right form textarea {
+    background: #262626;
+}
+
+.contact-right form .btn2 {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+}
+
+@media only screen and (max-width: 600px) {
+    nav #menu {
+        display: none;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .sub-title {
+        font-size: 30px;
+    }
+
+    .about-col-1 img {
+        border-radius: 0;
+    }
+
+    .tab-link {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .navbar-icons {
+        display: block;
+    }
+}
